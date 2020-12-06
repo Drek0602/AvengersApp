@@ -56,15 +56,47 @@
 		0229E9F225781B45000BE6DC /* AvengersApp */ = {
 			isa = PBXGroup;
 			children = (
-				0229E9F325781B45000BE6DC /* AppDelegate.swift */,
-				0229E9F525781B45000BE6DC /* SceneDelegate.swift */,
-				0229E9F725781B45000BE6DC /* ViewController.swift */,
-				0229E9F925781B45000BE6DC /* Main.storyboard */,
-				0229E9FC25781B45000BE6DC /* Assets.xcassets */,
-				0229E9FE25781B45000BE6DC /* LaunchScreen.storyboard */,
-				0229EA0125781B45000BE6DC /* Info.plist */,
+				029CAC6E257D537800423771 /* App */,
+				029CAC72257D53C100423771 /* Model */,
+				029CAC71257D53B600423771 /* Controllers */,
+				029CAC70257D53AC00423771 /* Views */,
 			);
 			path = AvengersApp;
+			sourceTree = "<group>";
+		};
+		029CAC6E257D537800423771 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0229E9F325781B45000BE6DC /* AppDelegate.swift */,
+				0229E9F525781B45000BE6DC /* SceneDelegate.swift */,
+				0229E9FC25781B45000BE6DC /* Assets.xcassets */,
+				0229EA0125781B45000BE6DC /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		029CAC70257D53AC00423771 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0229E9F925781B45000BE6DC /* Main.storyboard */,
+				0229E9FE25781B45000BE6DC /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		029CAC71257D53B600423771 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0229E9F725781B45000BE6DC /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		029CAC72257D53C100423771 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +319,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AvengersApp/Info.plist;
+				INFOPLIST_FILE = AvengersApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +337,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AvengersApp/Info.plist;
+				INFOPLIST_FILE = AvengersApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
