@@ -55,10 +55,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yGv-OM-6HG"/>
+                    <connections>
+                        <segue destination="YPh-OM-oeG" kind="show" id="mt8-w9-mJ0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-214.49275362318843" y="78.348214285714278"/>
+        </scene>
+        <!--AvengersHome-->
+        <scene sceneID="IBs-qZ-obn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AvengersHome" id="YPh-OM-oeG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Cg8-vI-FnF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lv3-C0-lVF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="78"/>
         </scene>
     </scenes>
     <resources>

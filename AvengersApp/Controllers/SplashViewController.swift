@@ -20,6 +20,8 @@ class SplashViewController: UIViewController {
         
         activityIndicator?.startAnimating()
         
+        navigateHome()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +39,7 @@ class SplashViewController: UIViewController {
     //MARK:-Private functions
     
     private func navigateHome(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4)) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) { [weak self] in
             
             let storyboardAvengersHome = UIStoryboard(name: "AvengersHome", bundle: nil)
             
