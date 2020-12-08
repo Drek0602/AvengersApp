@@ -19,10 +19,10 @@ class HeroesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadData()
+        
         tableView?.delegate = self
         tableView?.dataSource = self
-        
-        loadData()
         
     }
     
@@ -39,6 +39,11 @@ extension HeroesViewController: UITableViewDelegate, UITableViewDataSource {
         return heroes.count
     }
     
+    //set row height
+    /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return
+    }*/
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "HeroeCellView", for: indexPath) as? HeroeCellView
@@ -48,6 +53,10 @@ extension HeroesViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //returns table and position
     }
     
     

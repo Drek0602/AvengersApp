@@ -9,6 +9,7 @@ import UIKit
 
 class HeroeCellView: UITableViewCell {
     //MARK:- IBOutlets
+    @IBOutlet var heroCellView: UIView?
     @IBOutlet var heroeCellImage: UIImageView?
     @IBOutlet var heroeCellName: UILabel?
     
@@ -17,6 +18,13 @@ class HeroeCellView: UITableViewCell {
         super.awakeFromNib()
         
         selectionStyle = .none
+        heroCellView?.layer.cornerRadius = 4.0
+        heroCellView?.layer.shadowColor = UIColor.gray.cgColor
+        heroCellView?.layer.shadowOffset = CGSize.zero
+        heroCellView?.layer.shadowOpacity = 0.7
+        heroCellView?.layer.shadowRadius = 4.0
+        
+        heroeCellImage?.layer.cornerRadius = 4.0
         
     }
     

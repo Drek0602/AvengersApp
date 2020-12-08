@@ -76,6 +76,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="heroCellView" destination="dh3-U8-wtT" id="21r-gs-qz6"/>
                                             <outlet property="heroeCellImage" destination="hJa-Lo-R1M" id="wBA-jp-2lF"/>
                                             <outlet property="heroeCellName" destination="3my-O1-fNU" id="6EV-DS-lKH"/>
                                         </connections>
@@ -108,6 +109,57 @@
                     <view key="view" contentMode="scaleToFill" id="ted-Q5-lqQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o6M-Lh-zc5">
+                                <rect key="frame" x="0.0" y="63" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeroeCellView" rowHeight="249" id="eco-dX-Xhz" customClass="HeroeCellView" customModule="AvengersApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="249"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eco-dX-Xhz" id="PSO-ko-cZa">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="249"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Tzz-gX-v91">
+                                                    <rect key="frame" x="8" y="8" width="398" height="225"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2B-Tz-NxN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="165"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBo-2f-Bom">
+                                                            <rect key="frame" x="8" y="179" width="382" height="46"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="N2B-Tz-NxN" secondAttribute="trailing" id="6KA-KY-wfq"/>
+                                                        <constraint firstItem="N2B-Tz-NxN" firstAttribute="leading" secondItem="Tzz-gX-v91" secondAttribute="leading" id="NEF-D9-gJ0"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sBo-2f-Bom" secondAttribute="trailing" constant="8" id="aXi-hY-dBz"/>
+                                                        <constraint firstItem="sBo-2f-Bom" firstAttribute="leading" secondItem="Tzz-gX-v91" secondAttribute="leading" constant="8" id="xtI-yq-24k"/>
+                                                        <constraint firstItem="N2B-Tz-NxN" firstAttribute="top" secondItem="Tzz-gX-v91" secondAttribute="top" id="zVS-jk-nVX"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Tzz-gX-v91" secondAttribute="trailing" constant="8" id="ESw-2Z-WVd"/>
+                                                <constraint firstItem="Tzz-gX-v91" firstAttribute="leading" secondItem="PSO-ko-cZa" secondAttribute="leading" constant="8" id="WSy-1m-aS3"/>
+                                                <constraint firstAttribute="bottom" secondItem="Tzz-gX-v91" secondAttribute="bottom" constant="16" id="bhv-rA-pr9"/>
+                                                <constraint firstItem="Tzz-gX-v91" firstAttribute="top" secondItem="PSO-ko-cZa" secondAttribute="top" constant="8" id="uDR-dT-YOo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="heroeCellImage" destination="N2B-Tz-NxN" id="tl0-8R-8fZ"/>
+                                            <outlet property="heroeCellName" destination="sBo-2f-Bom" id="4KY-2u-kLc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ABv-Eu-z4h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
