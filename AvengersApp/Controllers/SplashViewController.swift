@@ -13,7 +13,6 @@ class SplashViewController: UIViewController {
     @IBOutlet var activityIndicator: UIActivityIndicatorView?
     
     
-    
     //MARK:- States
     override func viewDidLoad() {
         super.viewDidLoad()

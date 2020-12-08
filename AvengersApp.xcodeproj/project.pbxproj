@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		021EEA13257E6F60001040A2 /* AvengersHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021EEA12257E6F60001040A2 /* AvengersHome.storyboard */; };
+		021FC6E7257F9E6E002B1AB9 /* AvengersCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021FC6E6257F9E6E002B1AB9 /* AvengersCharacter.swift */; };
+		021FC6EA257FE72A002B1AB9 /* Heroe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021FC6E9257FE72A002B1AB9 /* Heroe.swift */; };
+		021FC6ED257FE736002B1AB9 /* Villain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021FC6EC257FE736002B1AB9 /* Villain.swift */; };
+		021FC6F2257FF158002B1AB9 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021FC6F1257FF158002B1AB9 /* HeroesViewController.swift */; };
+		021FC6F5257FF23B002B1AB9 /* HeroeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021FC6F4257FF23B002B1AB9 /* HeroeRepository.swift */; };
+		021FC6FA25800BE7002B1AB9 /* HeroeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021FC6F925800BE7002B1AB9 /* HeroeCellView.swift */; };
 		0229E9F425781B45000BE6DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E9F325781B45000BE6DC /* AppDelegate.swift */; };
 		0229E9F625781B45000BE6DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E9F525781B45000BE6DC /* SceneDelegate.swift */; };
 		0229E9F825781B45000BE6DC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E9F725781B45000BE6DC /* SplashViewController.swift */; };
@@ -18,6 +24,12 @@
 
 /* Begin PBXFileReference section */
 		021EEA12257E6F60001040A2 /* AvengersHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AvengersHome.storyboard; sourceTree = "<group>"; };
+		021FC6E6257F9E6E002B1AB9 /* AvengersCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengersCharacter.swift; sourceTree = "<group>"; };
+		021FC6E9257FE72A002B1AB9 /* Heroe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroe.swift; sourceTree = "<group>"; };
+		021FC6EC257FE736002B1AB9 /* Villain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Villain.swift; sourceTree = "<group>"; };
+		021FC6F1257FF158002B1AB9 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
+		021FC6F4257FF23B002B1AB9 /* HeroeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeRepository.swift; sourceTree = "<group>"; };
+		021FC6F925800BE7002B1AB9 /* HeroeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeCellView.swift; sourceTree = "<group>"; };
 		0229E9F025781B45000BE6DC /* AvengersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvengersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0229E9F325781B45000BE6DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0229E9F525781B45000BE6DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		021FC6F825800BC9002B1AB9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				021FC6F925800BE7002B1AB9 /* HeroeCellView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		0229E9E725781B45000BE6DC = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +110,9 @@
 		029CAC71257D53B600423771 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				021FC6F825800BC9002B1AB9 /* Cells */,
 				0229E9F725781B45000BE6DC /* SplashViewController.swift */,
+				021FC6F1257FF158002B1AB9 /* HeroesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -98,6 +120,10 @@
 		029CAC72257D53C100423771 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				021FC6E6257F9E6E002B1AB9 /* AvengersCharacter.swift */,
+				021FC6E9257FE72A002B1AB9 /* Heroe.swift */,
+				021FC6EC257FE736002B1AB9 /* Villain.swift */,
+				021FC6F4257FF23B002B1AB9 /* HeroeRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,8 +200,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0229E9F825781B45000BE6DC /* SplashViewController.swift in Sources */,
+				021FC6ED257FE736002B1AB9 /* Villain.swift in Sources */,
 				0229E9F425781B45000BE6DC /* AppDelegate.swift in Sources */,
+				021FC6F5257FF23B002B1AB9 /* HeroeRepository.swift in Sources */,
+				021FC6F2257FF158002B1AB9 /* HeroesViewController.swift in Sources */,
 				0229E9F625781B45000BE6DC /* SceneDelegate.swift in Sources */,
+				021FC6EA257FE72A002B1AB9 /* Heroe.swift in Sources */,
+				021FC6E7257F9E6E002B1AB9 /* AvengersCharacter.swift in Sources */,
+				021FC6FA25800BE7002B1AB9 /* HeroeCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
