@@ -39,7 +39,6 @@ class HeroeCellView: UITableViewCell {
     
     
     //MARK:- Configure view
-    
     func configureViews (heroe: Heroe) {
         heroeCellImage?.image = UIImage(named: heroe.image ?? "")
         heroeCellName?.text = heroe.name

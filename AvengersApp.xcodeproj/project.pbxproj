@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0203C6CC2582AB460062E0A2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0203C6CB2582AB460062E0A2 /* DetailViewController.swift */; };
+		0203C6D02582E3980062E0A2 /* VillainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0203C6CF2582E3980062E0A2 /* VillainsViewController.swift */; };
 		021EEA13257E6F60001040A2 /* AvengersHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021EEA12257E6F60001040A2 /* AvengersHome.storyboard */; };
 		021FC6E7257F9E6E002B1AB9 /* AvengersCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021FC6E6257F9E6E002B1AB9 /* AvengersCharacter.swift */; };
 		021FC6EA257FE72A002B1AB9 /* Heroe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021FC6E9257FE72A002B1AB9 /* Heroe.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0203C6CB2582AB460062E0A2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0203C6CF2582E3980062E0A2 /* VillainsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainsViewController.swift; sourceTree = "<group>"; };
 		021EEA12257E6F60001040A2 /* AvengersHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AvengersHome.storyboard; sourceTree = "<group>"; };
 		021FC6E6257F9E6E002B1AB9 /* AvengersCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengersCharacter.swift; sourceTree = "<group>"; };
 		021FC6E9257FE72A002B1AB9 /* Heroe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroe.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				021FC6F825800BC9002B1AB9 /* Cells */,
 				0229E9F725781B45000BE6DC /* SplashViewController.swift */,
 				021FC6F1257FF158002B1AB9 /* HeroesViewController.swift */,
+				0203C6CB2582AB460062E0A2 /* DetailViewController.swift */,
+				0203C6CF2582E3980062E0A2 /* VillainsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +214,8 @@
 				0229E9F825781B45000BE6DC /* SplashViewController.swift in Sources */,
 				021FC6ED257FE736002B1AB9 /* Villain.swift in Sources */,
 				0229E9F425781B45000BE6DC /* AppDelegate.swift in Sources */,
+				0203C6D02582E3980062E0A2 /* VillainsViewController.swift in Sources */,
+				0203C6CC2582AB460062E0A2 /* DetailViewController.swift in Sources */,
 				021FC6F5257FF23B002B1AB9 /* HeroeRepository.swift in Sources */,
 				021FC6F2257FF158002B1AB9 /* HeroesViewController.swift in Sources */,
 				021FC70125801BF3002B1AB9 /* VillainCellView.swift in Sources */,
