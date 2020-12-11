@@ -13,6 +13,7 @@ protocol DetailViewDelegate {
 
 class DetailViewController: UIViewController {
     var heroe: Heroe? = nil
+    var villain: Villain? = nil
     
     //MARK:- IBOutlets
     @IBOutlet var detailImage: UIImageView?
@@ -27,12 +28,17 @@ class DetailViewController: UIViewController {
     //MARK:-States
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(heroe ?? "")
+        //print(heroe ?? "")
+        //print(villain ?? "")
         
-        detailImage?.image = UIImage(named: heroe?.image ?? "")
+        
+        /*detailImage?.image = UIImage(named: heroe?.image ?? "")
         detailName?.text = heroe?.name
-        detailDescription?.text = heroe?.description
+        detailDescription?.text = heroe?.description*/
         
+        detailImage?.image = UIImage(named: villain?.image ?? "")
+        detailName?.text = villain?.name
+        detailDescription?.text = villain?.description
         
     }
     

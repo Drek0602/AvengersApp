@@ -15,10 +15,6 @@ class Heroe: AvengersCharacter {
         super.init(image: image,name: name,description: description)
     }
     
-    
-    
-    
-    
 }
 
 /*struct Heroe {

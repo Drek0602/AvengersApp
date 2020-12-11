@@ -106,7 +106,7 @@
         <!--Villains-->
         <scene sceneID="zc7-Q1-vXs">
             <objects>
-                <viewController title="Villains" id="FEe-Uq-eLE" sceneMemberID="viewController">
+                <viewController title="Villains" id="FEe-Uq-eLE" customClass="VillainsViewController" customModule="AvengersApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ted-Q5-lqQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +116,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeroeCellView" rowHeight="249" id="eco-dX-Xhz" customClass="HeroeCellView" customModule="AvengersApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VillainCellView" rowHeight="249" id="eco-dX-Xhz" customClass="VillainCellView" customModule="AvengersApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="249"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eco-dX-Xhz" id="PSO-ko-cZa">
@@ -154,8 +154,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="heroeCellImage" destination="N2B-Tz-NxN" id="tl0-8R-8fZ"/>
-                                            <outlet property="heroeCellName" destination="sBo-2f-Bom" id="4KY-2u-kLc"/>
+                                            <outlet property="villainCellImage" destination="N2B-Tz-NxN" id="1rZ-Hj-bNQ"/>
+                                            <outlet property="villainCellName" destination="sBo-2f-Bom" id="dMa-QF-qgw"/>
+                                            <outlet property="villainCellView" destination="PSO-ko-cZa" id="ZdW-qm-I2H"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -165,6 +166,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Villains" image="V_desactivado@3x" id="Lxh-Me-55J"/>
+                    <connections>
+                        <outlet property="tableView" destination="o6M-Lh-zc5" id="Pnh-Yq-hyx"/>
+                        <segue destination="rHI-kv-OGw" kind="show" identifier="SEGUE_FROM_VILLAINS_TO_DETAIL" id="W6F-gv-rql"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cj-qs-APj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,7 +219,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cdg-bZ-4jd"/>
                     <connections>
-                        <outlet property="detailDescription" destination="w8h-kX-JLD" id="6gO-ju-QoJ"/>
+                        <outlet property="detailDescription" destination="w8h-kX-JLD" id="qYf-Le-jdf"/>
                         <outlet property="detailImage" destination="FI0-BZ-lLC" id="uwi-VN-OOy"/>
                         <outlet property="detailName" destination="t9L-Oa-mOt" id="XBI-SA-2NC"/>
                     </connections>
@@ -224,6 +229,9 @@
             <point key="canvasLocation" x="1139" y="-159"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="W6F-gv-rql"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="S_desactivado@3x" width="16" height="17"/>
         <image name="V_desactivado@3x" width="11" height="17"/>
