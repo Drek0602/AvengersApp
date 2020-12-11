@@ -9,16 +9,16 @@ import Foundation
 
 typealias Heroes = [Heroe]
 
-class Heroe: AvengersCharacter {
+/*class Heroe: AvengersCharacter {
     
     override init (image: String, name: String, description: String) {
         super.init(image: image,name: name,description: description)
     }
     
-}
+}*/
 
-/*struct Heroe {
+struct Heroe {
     var image: String? = nil
     var name: String = ""
     var description: String = ""
-}*/
+}

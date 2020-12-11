@@ -19,8 +19,9 @@ class DetailViewController: UIViewController {
     @IBOutlet var detailImage: UIImageView?
     @IBOutlet var detailName: UILabel?
     @IBOutlet var detailDescription: UILabel?
-
-    var delegate: DetailViewDelegate? = nil
+    
+    
+    //var delegate: DetailViewDelegate? = nil
     //private let heroeRepository = HeroeRepository()
     //private var heroes: Heroes = []
 
@@ -28,17 +29,20 @@ class DetailViewController: UIViewController {
     //MARK:-States
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(heroe ?? "")
-        //print(villain ?? "")
+        print(heroe ?? "")
+        print(villain ?? "")
         
+    
+        if heroe != nil {
+            detailImage?.image = UIImage(named: heroe?.image ?? "")
+            detailName?.text = heroe?.name
+            detailDescription?.text = heroe?.description
+        } else {
+            detailImage?.image = UIImage(named: villain?.image ?? "")
+            detailName?.text = villain?.name
+            detailDescription?.text = villain?.description
+        }
         
-        /*detailImage?.image = UIImage(named: heroe?.image ?? "")
-        detailName?.text = heroe?.name
-        detailDescription?.text = heroe?.description*/
-        
-        detailImage?.image = UIImage(named: villain?.image ?? "")
-        detailName?.text = villain?.name
-        detailDescription?.text = villain?.description
         
     }
     

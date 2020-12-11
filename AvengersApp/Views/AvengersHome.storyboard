@@ -79,7 +79,6 @@
                                             <outlet property="heroCellView" destination="dh3-U8-wtT" id="21r-gs-qz6"/>
                                             <outlet property="heroeCellImage" destination="hJa-Lo-R1M" id="wBA-jp-2lF"/>
                                             <outlet property="heroeCellName" destination="3my-O1-fNU" id="6EV-DS-lKH"/>
-                                            <segue destination="rHI-kv-OGw" kind="show" identifier="SEGUE_FROM_HEROES_TO_DETAIL" id="4go-9c-B0J"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -97,11 +96,60 @@
                     <tabBarItem key="tabBarItem" title="Heroes" image="S_desactivado@3x" id="if4-HN-oGK"/>
                     <connections>
                         <outlet property="tableView" destination="2ly-TG-uSZ" id="0VF-qD-tWh"/>
+                        <segue destination="0wp-FO-5cq" kind="show" identifier="SEGUE_FROM_HEROES_TO_DETAIL" id="9oO-cC-QCZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeY-My-fgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="182.60869565217394" y="-586.60714285714278"/>
+        </scene>
+        <!--DetailViewController-->
+        <scene sceneID="a3u-70-vyr">
+            <objects>
+                <viewController title="DetailViewController" id="0wp-FO-5cq" customClass="DetailViewController" customModule="AvengersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rrE-hy-Huz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e5l-rF-JQJ">
+                                <rect key="frame" x="8" y="8" width="398" height="274"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DlG-NN-FDy">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="217"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9Z-wf-Uxz">
+                                        <rect key="frame" x="0.0" y="225" width="398" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIa-3B-Xcv">
+                                        <rect key="frame" x="0.0" y="253.5" width="398" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eNd-A5-Z35"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="e5l-rF-JQJ" secondAttribute="trailing" constant="8" id="NBo-4H-By3"/>
+                            <constraint firstItem="e5l-rF-JQJ" firstAttribute="top" secondItem="eNd-A5-Z35" secondAttribute="top" constant="8" id="OOz-lQ-FOh"/>
+                            <constraint firstItem="e5l-rF-JQJ" firstAttribute="leading" secondItem="eNd-A5-Z35" secondAttribute="leading" constant="8" id="xJo-tf-8dG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kh3-pl-mtp"/>
+                    <connections>
+                        <outlet property="detailDescription" destination="iIa-3B-Xcv" id="f7I-LJ-s8p"/>
+                        <outlet property="detailImage" destination="DlG-NN-FDy" id="NCg-w0-99b"/>
+                        <outlet property="detailName" destination="Y9Z-wf-Uxz" id="reI-h1-xqY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSz-vv-0UP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257.9710144927537" y="-172.09821428571428"/>
         </scene>
         <!--Villains-->
         <scene sceneID="zc7-Q1-vXs">
@@ -168,69 +216,16 @@
                     <tabBarItem key="tabBarItem" title="Villains" image="V_desactivado@3x" id="Lxh-Me-55J"/>
                     <connections>
                         <outlet property="tableView" destination="o6M-Lh-zc5" id="Pnh-Yq-hyx"/>
-                        <segue destination="rHI-kv-OGw" kind="show" identifier="SEGUE_FROM_VILLAINS_TO_DETAIL" id="W6F-gv-rql"/>
+                        <segue destination="0wp-FO-5cq" kind="show" identifier="SEGUE_FROM_VILLAINS_TO_DETAIL" id="CrJ-ly-jRl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cj-qs-APj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="183" y="193"/>
         </scene>
-        <!--DetailViewController-->
-        <scene sceneID="vgV-h5-nuO">
-            <objects>
-                <viewController title="DetailViewController" id="rHI-kv-OGw" customClass="DetailViewController" customModule="AvengersApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0Za-86-BIi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tFq-1s-bXb">
-                                <rect key="frame" x="8" y="8" width="398" height="457"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FI0-BZ-lLC">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="400"/>
-                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9L-Oa-mOt">
-                                        <rect key="frame" x="0.0" y="408" width="45" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8h-kX-JLD">
-                                        <rect key="frame" x="0.0" y="436.5" width="87.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="FI0-BZ-lLC" secondAttribute="trailing" id="qzk-bw-k3I"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="UOS-rb-em3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="UOS-rb-em3" firstAttribute="bottom" secondItem="tFq-1s-bXb" secondAttribute="bottom" constant="343" id="8Hv-ac-oFa"/>
-                            <constraint firstItem="tFq-1s-bXb" firstAttribute="top" secondItem="UOS-rb-em3" secondAttribute="top" constant="8" id="Dvy-Mh-FWE"/>
-                            <constraint firstItem="tFq-1s-bXb" firstAttribute="leading" secondItem="UOS-rb-em3" secondAttribute="leading" constant="8" id="bhy-ef-N3j"/>
-                            <constraint firstItem="tFq-1s-bXb" firstAttribute="centerX" secondItem="0Za-86-BIi" secondAttribute="centerX" id="vfH-ts-HnC"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="cdg-bZ-4jd"/>
-                    <connections>
-                        <outlet property="detailDescription" destination="w8h-kX-JLD" id="qYf-Le-jdf"/>
-                        <outlet property="detailImage" destination="FI0-BZ-lLC" id="uwi-VN-OOy"/>
-                        <outlet property="detailName" destination="t9L-Oa-mOt" id="XBI-SA-2NC"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cOB-eq-g9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1139" y="-159"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="W6F-gv-rql"/>
+        <segue reference="CrJ-ly-jRl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="S_desactivado@3x" width="16" height="17"/>
