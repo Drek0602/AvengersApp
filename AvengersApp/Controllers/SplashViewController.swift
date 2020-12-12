@@ -10,15 +10,18 @@ import UIKit
 class SplashViewController: UIViewController {
     
     //MARK:- IBOutlets
-    @IBOutlet var activityIndicator: UIActivityIndicatorView?
+    @IBOutlet var progressView: UIProgressView?
+    
+    //MARK:-Constant - ProgressView
+    
+    let progress = Progress(totalUnitCount: 6)
     
     
     //MARK:- States
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        activityIndicator?.startAnimating()
-        
+        startProgress()
         navigateHome()
         
     }
@@ -38,7 +41,7 @@ class SplashViewController: UIViewController {
     //MARK:-Private functions
     
     private func navigateHome(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6)) { [weak self] in
             
             let storyboardAvengersHome = UIStoryboard(name: "AvengersHome", bundle: nil)
             
@@ -48,6 +51,24 @@ class SplashViewController: UIViewController {
             
             
         }
+    }
+    
+    private func startProgress(){
+        
+        progressView?.progress = 0.0
+        progress.completedUnitCount = 0
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            guard self.progress.isFinished == false else {
+                timer.invalidate()
+                return
+            }
+            
+            self.progress.completedUnitCount += 1
+            self.progressView?.setProgress(Float (self.progress.fractionCompleted), animated: true)
+            
+        }
+        
     }
 
 
