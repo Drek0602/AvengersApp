@@ -8,18 +8,29 @@
 import UIKit
 
 class HeroesViewController: UIViewController {
+    
     //MARK:- IBOutlets
     @IBOutlet var tableView: UITableView?
+    
     
     //MARK:- Private properties
     private let heroeRepository = HeroeRepository()
     private var heroes: Heroes = []
     
-    //MARK:- States
+    
+    
+    //MARK:- Lifecycle States
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.parent?.title = "Heroes"
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.navigationItem.title = "Heroes"
+    
         
-        title = "Heroes"
+        //title = "Heroes"
         
         loadData()
         
@@ -28,6 +39,7 @@ class HeroesViewController: UIViewController {
         
     }
     
+    //MARK:- Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destination = segue.destination as? DetailViewController,
               let data = sender as? Heroe else {
@@ -35,15 +47,17 @@ class HeroesViewController: UIViewController {
         }
         
         destination.heroe = data
-        //destination.delegate = self
-        //destination.heroe?.image = data.image
     }
+    
     
     
     //MARK:- Private Functions
+    //load heroes repo, being called in viewDidLoad
     private func loadData(){
         heroes = heroeRepository.heroesList
     }
+    
+    
     
     //MARK:- Public Functions
     func heroe(at indexPath: IndexPath) -> Heroe? {
@@ -60,11 +74,6 @@ extension HeroesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return heroes.count
     }
-    
-    //set row height
-    /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return
-    }*/
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -83,21 +92,20 @@ extension HeroesViewController: UITableViewDelegate, UITableViewDataSource {
                 print(heroes[indexPath.row])
                 performSegue(withIdentifier: "SEGUE_FROM_HEROES_TO_DETAIL",
                              sender: heroe)
+                
             }
             
-            
-            /*let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
-            self.navigationController?.pushViewController(detailViewController, animated: true)*/
-            
         }
+        
     }
-    
     
 }
 
-/*extension HeroesViewController: DetailViewDelegate {
-    func updateData(_ heroe: Heroe?) {
-        
-    }*/
-        
-//}
+//TODO: Not being used 
+extension HeroesViewController {
+    func setTitles(navigationTitle: String, tabBarTitle: String) {
+        title = tabBarTitle
+        navigationItem.title = navigationTitle
+    }
+}
+

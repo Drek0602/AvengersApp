@@ -13,8 +13,10 @@ class SplashViewController: UIViewController {
     @IBOutlet var progressView: UIProgressView?
     
     //MARK:-Constant - ProgressView
-    
     let progress = Progress(totalUnitCount: 6)
+    
+    //MARK:- Properties
+
     
     
     //MARK:- States

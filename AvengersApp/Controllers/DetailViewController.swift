@@ -34,10 +34,12 @@ class DetailViewController: UIViewController {
         
     
         if heroe != nil {
+            self.title = heroe?.name
             detailImage?.image = UIImage(named: heroe?.image ?? "")
             detailName?.text = heroe?.name
             detailDescription?.text = heroe?.description
         } else {
+            self.title = villain?.name
             detailImage?.image = UIImage(named: villain?.image ?? "")
             detailName?.text = villain?.name
             detailDescription?.text = villain?.description

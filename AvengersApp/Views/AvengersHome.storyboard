@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Avengers-->
+        <!--Tab Bar Controller-->
         <scene sceneID="Fly-ek-vUB">
             <objects>
-                <tabBarController title="Avengers" id="qLk-z0-eic" sceneMemberID="viewController">
+                <tabBarController id="qLk-z0-eic" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9je-48-3ya">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeroeCellView" rowHeight="249" id="iMG-EJ-MDf" customClass="HeroeCellView" customModule="AvengersApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" alpha="0.34999999999999998" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeroeCellView" rowHeight="249" id="iMG-EJ-MDf" customClass="HeroeCellView" customModule="AvengersApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="249"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iMG-EJ-MDf" id="dh3-U8-wtT">
@@ -234,7 +234,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CrJ-ly-jRl"/>
+        <segue reference="9oO-cC-QCZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="S_desactivado@3x" width="16" height="17"/>

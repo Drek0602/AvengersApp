@@ -16,9 +16,15 @@ class VillainsViewController: UIViewController {
     private let villainRepository = VillainRepository()
     private var villains: Villains = []
     
+    //MARK:- Lifecycle States
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.parent?.title = "Villains"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Villains"
+        
         loadData()
         
         tableView?.delegate = self
