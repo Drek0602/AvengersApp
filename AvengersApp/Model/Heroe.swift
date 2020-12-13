@@ -21,4 +21,6 @@ struct Heroe {
     var image: String? = nil
     var name: String = ""
     var description: String = ""
+    var actor: String = ""
+    var species: String = ""
 }

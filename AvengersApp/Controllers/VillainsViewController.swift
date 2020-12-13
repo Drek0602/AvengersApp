@@ -19,7 +19,7 @@ class VillainsViewController: UIViewController {
     //MARK:- Lifecycle States
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.parent?.title = "Villains"
+        self.parent?.title = "Villanos"
     }
     
     override func viewDidLoad() {
