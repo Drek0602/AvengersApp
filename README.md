@@ -7,6 +7,6 @@
 
 ## Implementations
 
-- Navigation Contoller
+- Navigation Controller
 - TabBar Controller
 - TableView
